@@ -21,7 +21,7 @@ jobs:
       run: |
         mkdir -p ~/.gnupg/
         echo "${{ secrets.GPG_PRIVATE_KEY }}" > ~/.gnupg/private.key
-        gpg --import ~/.gnupg/private.key --passphrase ${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }}
+        echo ${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }} | gpg --batch --yes --passphrase-fd 0 ~/.gnupg/private.key
     - name: Configuring git email
       run: git config --global user.email "release@aws-secretsmanager.com"
     - name: Configuring git user
