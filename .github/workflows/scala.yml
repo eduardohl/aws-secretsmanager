@@ -20,7 +20,7 @@ jobs:
     - name: Configuring gpg key for sonatype release
       run: |
         mkdir -p ~/.gnupg/
-        printf "${{ secrets.GPG_PRIVATE_KEY }}" > ~/.gnupg/private.key
+        echo "${{ secrets.GPG_PRIVATE_KEY }}" > ~/.gnupg/private.key
         gpg --import ~/.gnupg/private.key --passphrase ${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }}
     - name: Configuring git email
       run: git config --global user.email "release@aws-secretsmanager.com"
