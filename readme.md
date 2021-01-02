@@ -1,3 +1,5 @@
+![Scala CI](https://github.com/eduardohl/aws-secretsmanager/workflows/Scala%20CI/badge.svg?branch=master)
+
 ## Description
 This is a simple Scala wrapper intended to assist using the AWS Secrets Manager API.
 The wrapper is by no means exhaustive, and implements essentially just a way to retrieve secret key values.
