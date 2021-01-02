@@ -1,12 +1,13 @@
-package com.sakuralabs
+package io.github.eduardohl
 
 import cats.effect.Resource
 import com.amazonaws.regions.Regions
 import com.amazonaws.services.secretsmanager.model.GetSecretValueRequest
 import com.amazonaws.services.secretsmanager.{AWSSecretsManager, AWSSecretsManagerClientBuilder}
-import com.sakuralabs.SecretManager.{Secret, client, getSecretValueRequest}
+import io.github.eduardohl.JsonUtils.jsonStrToSecrets
+import io.github.eduardohl.SecretManager.{Secret, client, getSecretValueRequest}
 import monix.eval.Task
-import JsonUtils.jsonStrToSecrets
+
 object SecretManager {
 
   case class Secret(key: String, value: String)

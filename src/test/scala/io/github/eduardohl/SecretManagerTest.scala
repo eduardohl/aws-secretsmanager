@@ -1,7 +1,7 @@
-package com.sakuralabs
+package io.github.eduardohl
 
-import com.amazonaws.services.secretsmanager.{AWSSecretsManager, AWSSecretsManagerClientBuilder}
 import com.amazonaws.services.secretsmanager.model.{CreateSecretRequest, ResourceNotFoundException}
+import com.amazonaws.services.secretsmanager.{AWSSecretsManager, AWSSecretsManagerClientBuilder}
 import com.dimafeng.testcontainers
 import com.dimafeng.testcontainers.{ForAllTestContainer, LocalStackContainer}
 import monix.eval.Task
