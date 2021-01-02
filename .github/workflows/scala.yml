@@ -17,5 +17,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: Configuring git email
+      run: git config --global user.email "release@aws-secretsmanager.com"
+    - name: Configuring git user
+      run: git config --global user.name "Version Bumper"
     - name: Release version
       run: sbt "release cross with-defaults"
