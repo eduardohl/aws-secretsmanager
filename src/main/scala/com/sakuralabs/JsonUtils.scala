@@ -1,11 +1,12 @@
 package com.sakuralabs
 
+import com.sakuralabs.SecretManager.Secret
 import org.json4s.DefaultFormats
 import org.json4s.native.JsonMethods.parse
 
 object JsonUtils {
-  def jsonStrToMap(jsonStr: String): Map[String, String] = {
+  implicit def jsonStrToSecrets(jsonStr: String): Seq[Secret] = {
     implicit val formats: DefaultFormats.type = org.json4s.DefaultFormats
-    parse(jsonStr).extract[Map[String, String]]
+    parse(jsonStr).extract[Map[String, String]].map { case (k, v) => Secret(k, v) }.toSeq
   }
 }
