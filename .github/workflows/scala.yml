@@ -18,7 +18,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Configuring gpg key for sonatype release
-      run: echo ${{ secrets.GPG_PRIVATE_KEY }} | gpg --import --passprase ${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }}
+      run: echo ${{ secrets.GPG_PRIVATE_KEY }} | gpg --import --passphrase ${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }}
     - name: Configuring git email
       run: git config --global user.email "release@aws-secretsmanager.com"
     - name: Configuring git user
