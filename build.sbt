@@ -19,7 +19,7 @@ libraryDependencies ++= Seq(
 
   "com.dimafeng" %% "testcontainers-scala-scalatest" % testcontainersVersion % Test,
   "com.dimafeng" %% "testcontainers-scala-localstack" % testcontainersVersion % Test,
-  "org.scalatest" %% "scalatest" % "latest.integration" % Test
+  "org.scalatest" %% "scalatest" % "3.2.2" % Test
 )
 
 Test / fork := true
@@ -30,3 +30,5 @@ publishTo := Some(
   else
     Opts.resolver.sonatypeStaging
 )
+
+releasePublishArtifactsAction := PgpKeys.publishSigned.value
