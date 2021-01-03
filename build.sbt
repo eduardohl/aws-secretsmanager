@@ -2,7 +2,6 @@
 name := "aws-secretsmanager"
 scalaVersion := "2.13.4"
 crossScalaVersions := Seq("2.13.4", "2.12.12")
-crossPaths := false
 
 organization := "io.github.eduardohl"
 homepage := Some(url("https://github.com/eduardohl/aws-secretsmanager"))
