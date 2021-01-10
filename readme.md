@@ -4,6 +4,14 @@
 This is a simple Scala wrapper intended to assist using the AWS Secrets Manager API.
 The wrapper is by no means exhaustive, and implements essentially just a way to retrieve secret key values.
 
+## Configuration
+Import it from Maven Central by adding to dependencies
+```
+libraryDependencies ++= Seq(
+  "io.github.eduardohl" %% "aws-secretsmanager" % "0.0.6"
+)
+```
+
 ## Usage
 This code will return a Task[Secret] from which the resulting key values can be extracted
 ```
