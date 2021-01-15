@@ -12,7 +12,7 @@ object SecretManager {
 
   case class Secret(key: String, value: String)
 
-  def apply: SecretManager = {
+  def apply(): SecretManager = {
     val buildSecretsManager = Task(AWSSecretsManagerClientBuilder
       .standard
       .build)
