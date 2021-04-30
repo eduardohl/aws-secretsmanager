@@ -8,7 +8,7 @@ The wrapper is by no means exhaustive, and implements essentially just a way to 
 Import it from Maven Central by adding to dependencies
 ```
 libraryDependencies ++= Seq(
-  "io.github.eduardohl" %% "aws-secretsmanager" % "0.0.6"
+  "io.github.eduardohl" %% "aws-secretsmanager" % "0.0.8"
 )
 ```
 
